@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Tool - Master Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .master-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(74, 144, 226, 0.9), rgba(45, 52, 54, 0.9)),
+                        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .master-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .master-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+        }
+
+        .master-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .master-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform var(--transition);
+        }
+
+        .master-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .master-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .master-header i {
+            font-size: 2rem;
+        }
+
+        .master-header h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .master-content {
+            padding: 1.5rem;
+        }
+
+        .master-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .action-btn:hover {
+            background: var(--accent-color);
+        }
+
+        .action-btn.secondary {
+            background: var(--light-bg);
+            color: var(--secondary-color);
+        }
+
+        .action-btn.secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .master-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .master-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .master-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-laptop-code"></i> CBT Tool</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="subject.html">Subject</a></li>
+            <li><a href="master.html" class="active">Masters</a></li>
+            <li><a href="exam.html">Exam</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="#" class="login-btn">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="master-hero">
+        <h1>Master Management</h1>
+    </section>
+
+    <!-- Master Container -->
+    <div class="master-container">
+        <div class="master-grid">
+            <!-- Subject Master -->
+            <div class="master-card">
+                <div class="master-header">
+                    <i class="fas fa-book"></i>
+                    <h2>Subject Master</h2>
+                </div>
+                <div class="master-content">
+                    <p class="master-description">
+                        Manage and organize all subjects, topics, and their relationships. Create, edit, and maintain the subject hierarchy for your examination system.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="subjectMasterForm.php" class="action-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Click Here
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paper Setter Master -->
+            <div class="master-card">
+                <div class="master-header">
+                    <i class="fas fa-user-tie"></i>
+                    <h2>Paper Setter Master</h2>
+                </div>
+                <div class="master-content">
+                    <p class="master-description">
+                        Manage paper setters, their expertise areas, and access levels. Assign subjects and monitor question paper creation activities.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="paperSetterForm.php" class="action-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Click Here
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Bank Master -->
+            <div class="master-card">
+                <div class="master-header">
+                    <i class="fas fa-database"></i>
+                    <h2>Question Bank Master</h2>
+                </div>
+                <div class="master-content">
+                    <p class="master-description">
+                        Organize and categorize questions, manage difficulty levels, and maintain question metadata. Create a structured repository of examination questions.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="questionBankMasterForm.php" class="action-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Click Here
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Bank -->
+            <div class="master-card">
+                <div class="master-header">
+                    <i class="fas fa-book-open"></i>
+                    <h2>Question Bank</h2>
+                </div>
+                <div class="master-content">
+                    <p class="master-description">
+                        Access and manage the complete question repository. Create question papers, review questions, and maintain quality standards.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="questionBankForm.html" class="action-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Click Here
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@cbttool.com</p>
+                <p><i class="fas fa-phone"></i> 90989-53409</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="exam.html">Exams</a></li>
+                    <li><a href="result.html">Results</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CBT Tool. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 

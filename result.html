@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Tool - Exam Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .result-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(74, 144, 226, 0.9), rgba(45, 52, 54, 0.9)),
+                        url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .result-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .result-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform var(--transition);
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .result-header i {
+            font-size: 2.5rem;
+        }
+
+        .result-header h2 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .result-content {
+            padding: 2rem;
+        }
+
+        .result-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .action-btn:hover {
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .result-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .result-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-laptop-code"></i> CBT Tool</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="subject.html">Subject</a></li>
+            <li><a href="master.html">Masters</a></li>
+            <li><a href="exam.html" class="active">Exam</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="#" class="login-btn">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+   
+    <!-- Hero Section -->
+    <section class="result-hero">
+        <h1>Results & Performance</h1>
+    </section>
+
+    <!-- Result Container -->
+    <div class="result-container">
+        <div class="result-grid">
+            <!-- Check Results Section -->
+            <div class="result-card">
+                <div class="result-header">
+                    <i class="fas fa-chart-bar"></i>
+                    <h2>Check Your Results</h2>
+                </div>
+                <div class="result-content">
+                    <p class="result-description">
+                        View your individual test results, detailed score breakdowns, and performance metrics. Access your past exam results and download score reports.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="resultForm.html" class="action-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            View Results
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+     <!-- Performance Analysis Section -->
+            <div class="result-card">
+                <div class="result-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Performance Analysis</h2>
+                </div>
+                <div class="result-content">
+                    <p class="result-description">
+                        Analyze your overall performance across different subjects and tests. Get insights into your strengths, areas for improvement, and progress over time.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="studentForm.html" class="action-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            View Performance
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@cbttool.com</p>
+                <p><i class="fas fa-phone"></i> 90989-53409</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="exam.html">Exams</a></li>
+                    <li><a href="result.html">Results</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CBT Tool. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+
+    </script>
+</body>
+</html> 

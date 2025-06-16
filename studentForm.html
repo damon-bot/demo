@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Your Result</title>
+    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+        }
+        .form-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            border: none;
+            padding: 12px 20px;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+         .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            transition: var(--transition);
+    }
+
+    .back-link:hover {
+            color: var(--accent-color);
+    }
+
+    </style>
+</head>
+<body>
+    <form class="form-box" action="studentPerformance.php" method="POST">
+        <h2>Enter Student ID</h2>
+        <input type="text" name="student_id" placeholder="Enter Your Student Id" required />
+        <button type="submit">Submit</button>
+
+         
+        <a href="result.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to result Page
+        </a>
+    </form>
+</body>
+</html>

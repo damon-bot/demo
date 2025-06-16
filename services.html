@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - CBT Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+       /* Features Section */
+        .features {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+</style>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-laptop-code"></i> CBT Tool</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="login.html" class="login-btn">Login</a></li>
+            <li><a href="register.html" class="register-btn">Register</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Services Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive Testing Solutions for Every Need</p>
+        </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section class="services-main">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Academic Testing</h3>
+                    <p>Comprehensive assessment solutions for schools, colleges, and universities</p>
+                    <ul>
+                        <li>Customizable test formats</li>
+                        <li>Automated grading system</li>
+                        <li>Detailed performance analytics</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Corporate Training</h3>
+                    <p>Professional assessment tools for employee training and evaluation</p>
+                    <ul>
+                        <li>Skill assessment tests</li>
+                        <li>Certification programs</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certification Exams</h3>
+                    <p>Secure and reliable platform for professional certification tests</p>
+                    <ul>
+                        <li>Proctored examinations</li>
+                        <li>Secure test environment</li>
+                        <li>Instant certification</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Testing</h3>
+                    <p>Advanced security measures to prevent cheating and ensure test integrity</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Comprehensive insights into student performance and test results</p>
+                </div>
+                <!-- <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Access tests and results from any device, anywhere</p>
+                </div> -->
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Time Management</h3>
+                    <p>Flexible scheduling and automated time tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@cbttool.com</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CBT Tool. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

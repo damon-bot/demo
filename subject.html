@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Tool - Subjects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .subjects-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(74, 144, 226, 0.9), rgba(45, 52, 54, 0.9)),
+                        url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .subjects-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subjects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 5%;
+        }
+
+        .subject-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            overflow: hidden;
+            transition: transform var(--transition);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .subject-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .subject-header i {
+            font-size: 2.5rem;
+        }
+
+        .subject-header h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .subject-content {
+            padding: 2rem;
+        }
+
+        .subject-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .topic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .topic-item {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .topic-item i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .topic-item h4 {
+            margin: 0;
+            color: var(--secondary-color);
+        }
+
+        .start-test-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background var(--transition);
+        }
+
+        .start-test-btn:hover {
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .subjects-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .subject-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .topic-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-laptop-code"></i> CBT Tool</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="subject.html" class="active">Subject</a></li>
+            <li><a href="master.html">Masters</a></li>
+            <li><a href="exam.html">Exam</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="#" class="login-btn">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="subjects-hero">
+        <h1>Available Subjects</h1>
+    </section>
+
+    <!-- Subjects Container -->
+    <div class="subjects-container">
+        <!-- Aptitude Section -->
+        <div class="subject-card">
+            <div class="subject-header">
+                <i class="fas fa-brain"></i>
+                <h2>Aptitude</h2>
+            </div>
+            <div class="subject-content">
+                <p class="subject-description">
+                    Test your numerical and analytical abilities with our comprehensive aptitude tests. 
+                    These tests are designed to evaluate your problem-solving skills and logical thinking capabilities.
+                </p>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <i class="fas fa-calculator"></i>
+                        <h4>Numerical Ability</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-percentage"></i>
+                        <h4>Percentage & Profit Loss</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Time & Work</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data Interpretation</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-sort-numeric-up"></i>
+                        <h4>Number Series</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <h4>Ratio & Proportion</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Speed & Distance</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-cube"></i>
+                        <h4>Mensuration</h4>
+                    </div>
+                </div>
+                <a href="#" class="start-test-btn">Start Aptitude Test</a>
+            </div>
+        </div>
+
+        <!-- Reasoning Section -->
+        <div class="subject-card">
+            <div class="subject-header">
+                <i class="fas fa-puzzle-piece"></i>
+                <h2>Reasoning</h2>
+            </div>
+            <div class="subject-content">
+                <p class="subject-description">
+                    Enhance your logical reasoning and analytical skills with our carefully crafted reasoning tests.
+                    These tests help in developing critical thinking and problem-solving abilities.
+                </p>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <i class="fas fa-sitemap"></i>
+                        <h4>Logical Reasoning</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-chess"></i>
+                        <h4>Verbal Reasoning</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-cubes"></i>
+                        <h4>Non-Verbal Reasoning</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-sort-numeric-down"></i>
+                        <h4>Series & Sequences</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>Blood Relations</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-directions"></i>
+                        <h4>Direction Sense</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Calendar & Clock</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>Coding-Decoding</h4>
+                    </div>
+                </div>
+                <a href="#" class="start-test-btn">Start Reasoning Test</a>
+            </div>
+        </div>
+
+        <!-- Verbal Ability Section -->
+        <div class="subject-card">
+            <div class="subject-header">
+                <i class="fas fa-language"></i>
+                <h2>Verbal Ability</h2>
+            </div>
+            <div class="subject-content">
+                <p class="subject-description">
+                    Master your language skills and communication abilities with our comprehensive verbal ability tests.
+                    These tests are designed to enhance your vocabulary, grammar, and comprehension skills.
+                </p>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <i class="fas fa-book"></i>
+                        <h4>Reading Comprehension</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h4>Writing Skills</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-spell-check"></i>
+                        <h4>Grammar & Vocabulary</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-synonyms"></i>
+                        <h4>Synonyms & Antonyms</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-quote-right"></i>
+                        <h4>Idioms & Phrases</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-paragraph"></i>
+                        <h4>Para Jumbles</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-fill-drip"></i>
+                        <h4>Fill in the Blanks</h4>
+                    </div>
+                    <div class="topic-item">
+                        <i class="fas fa-spell-check"></i>
+                        <h4>Error Detection</h4>
+                    </div>
+                </div>
+                <a href="#" class="start-test-btn">Start Verbal Ability Test</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+           <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@cbttool.com</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="exam.html">Exams</a></li>
+                    <li><a href="result.html">Results</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CBT Tool. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 
